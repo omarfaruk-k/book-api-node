@@ -4,7 +4,11 @@ const router = express.Router();
 
 router.get('/', (req,res) => {
     
-    res.send('List of books');
+     const books = [
+        { id: 1, title: 'Book One', author: 'Author A' },
+        { id: 2, title: 'Book Two', author: 'Author B' }
+    ];
+    res.json(books);
 })
 
 router.get('/:id', (req,res) => {
